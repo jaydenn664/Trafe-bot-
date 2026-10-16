@@ -31,6 +31,6 @@ import requests
 
 # ── Settings ────────────────────────────────────────────
 
-- name: Check for new candlesenv:DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}run: python free_bot.py --once
+import os DISCORD_URL = os.environ.get("https://discordapp.com/api/webhooks/1560425839386955806/D5GwmkR24plktV6y04FpIZoYjCq0ON1otPpM9n60RaUNaQ-b9A-6R53_IzD-2n2Kv_sR", "")
 
 PAIRS = [p.strip().upper() for p in os.environ.get("PAIRS", "XBTUSD,ETHUSD").split(",") if p.strip()]
